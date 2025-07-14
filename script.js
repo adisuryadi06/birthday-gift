@@ -3,5 +3,9 @@ document.getElementById('giftBtn').addEventListener('click', () => {
   const music = document.getElementById('bgMusic');
 
   surprise.classList.remove('hidden');
-  music.play();
+
+  // Mainkan musik (dari aksi pengguna, jadi diizinkan browser)
+  music.play().catch(e => {
+    console.log("Autoplay error: ", e);
+  });
 });
