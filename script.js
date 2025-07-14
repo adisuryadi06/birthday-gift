@@ -1,23 +1,5 @@
-document.getElementById('giftBtn').addEventListener('click', (e) => {
-  const surprise = document.getElementById('surprise');
-  const music = document.getElementById('bgMusic');
-
-  surprise.classList.remove('hidden');
-  music.play().catch(() => {});
-  // Letusan terus setiap 2 detik
-setInterval(() => {
-  const x = Math.random() * window.innerWidth;
-  const y = Math.random() * window.innerHeight / 2;
-  createFirework(x, y);
-}, 2000);
-
-
-  // Kembang api meletus di posisi mouse klik
-  const x = e.clientX;
-  const y = e.clientY;
-  createFirework(x, y);
-
-  function createHearts() {
+// Fungsi animasi hati
+function createHearts() {
   const heartsContainer = document.getElementById("hearts");
 
   setInterval(() => {
@@ -31,17 +13,35 @@ setInterval(() => {
   }, 300);
 }
 
+// Event klik tombol kado
+document.getElementById('giftBtn').addEventListener('click', (e) => {
+  const surprise = document.getElementById('surprise');
+  const music = document.getElementById('bgMusic');
+
+  surprise.classList.remove('hidden');
+  music.play().catch(() => {});
+
+  // Letusan kembang api terus
+  setInterval(() => {
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight / 2;
+    createFirework(x, y);
+  }, 2000);
+
+  // Letusan awal di tempat klik
+  const x = e.clientX;
+  const y = e.clientY;
+  createFirework(x, y);
+
+  // 💖 Panggil animasi love
+  createHearts();
 });
 
+// Tombol ulang dari awal
 document.getElementById('resetBtn').addEventListener('click', () => {
-  // Reset tampilan
   document.getElementById('surprise').classList.add('hidden');
-
-  // Hentikan musik
   const music = document.getElementById('bgMusic');
   music.pause();
   music.currentTime = 0;
-
-  // Scroll ke atas
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
