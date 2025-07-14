@@ -85,6 +85,10 @@ button:hover {
 audio {
   width: 100%;
 }
+#giftBtn {
+  position: relative;
+  z-index: 10;
+}
 
 /* Animasi */
 @keyframes fadeIn {
