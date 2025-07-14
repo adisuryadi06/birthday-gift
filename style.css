@@ -1,42 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Segoe UI", sans-serif;
-  text-align: center;
-  background: linear-gradient(to right, #ffecd2, #fcb69f);
-  padding: 50px;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #333;
 }
 
 .container {
-  max-width: 600px;
-  margin: auto;
   background: white;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #ff4081;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
 button {
-  background: transparent;
+  background: none;
   border: none;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.photo {
-  width: 250px;
-  margin-top: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #888;
-  animation: fadeIn 2s ease-in-out;
+button:hover {
+  transform: scale(1.1);
+}
+
+.gift-icon {
+  width: 100px;
+  animation: pulse 2s infinite;
 }
 
 .hidden {
   display: none;
 }
 
+.surprise-box {
+  margin-top: 30px;
+  animation: slideUp 1s ease;
+}
+
+.name {
+  color: #ff4081;
+  font-weight: bold;
+}
+
+.message {
+  margin: 20px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.photo {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  animation: fadeIn 2s ease;
+}
+
+audio {
+  width: 100%;
+}
+
+/* Animasi */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slideUp {
+  from {transform: translateY(50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
   }
-  to {
-    opacity: 1;
+
+  .photo {
+    max-width: 90%;
   }
 }
