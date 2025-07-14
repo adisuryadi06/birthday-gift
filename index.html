@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Selamat Ulang Tahun Sayang!</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun Cintaku</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <h1>Selamat Ulang Tahun 🎉</h1>
-        <p>Untuk istriku tercinta</p>
+  <div class="container">
+    <h1 class="title">🎉 Selamat Ulang Tahun 🎉</h1>
+    <p class="subtitle">Untuk istriku tercinta</p>
 
-        <button id="giftBtn">
-            <img src="assets/gift.png" alt="Kado" width="100">
-        </button>
+    <button id="giftBtn">
+      <img src="assets/gift.png" alt="Kado" class="gift-icon">
+    </button>
 
-        <div id="surprise" class="hidden">
-            <h2>💖 Namamu: <span id="wifeName">[Nama Istri]</span></h2>
-            <img src="assets/photo.jpg" alt="Foto Istri" class="photo">
-            <audio controls autoplay>
-                <source src="assets/music.mp3" type="audio/mpeg">
-                Browser Anda tidak mendukung audio.
-            </audio>
-        </div>
+    <div id="surprise" class="hidden surprise-box">
+      <h2>💖 Selamat ulang tahun yang ke-30, <span class="name">Dewi Anjani</span> 💖</h2>
+      <p class="message">
+        Semoga selalu diberikan kesehatan, kebahagiaan, dan keberkahan dalam setiap langkahmu. 
+        Terima kasih telah menjadi cahaya dalam hidupku. Aku mencintaimu. 💕
+      </p>
+      <img src="assets/photo.jpg" alt="Foto Istri" class="photo">
+
+      <audio controls autoplay>
+        <source src="assets/music.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung audio.
+      </audio>
     </div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
