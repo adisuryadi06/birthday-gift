@@ -100,6 +100,23 @@ audio {
   animation: floatUp 8s linear infinite;
 }
 
+.reset-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.reset-btn:hover {
+  background: #e73370;
+}
+
+
 @keyframes floatUp {
   0% {
     bottom: -150px;
