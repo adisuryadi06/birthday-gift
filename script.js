@@ -4,6 +4,13 @@ document.getElementById('giftBtn').addEventListener('click', (e) => {
 
   surprise.classList.remove('hidden');
   music.play().catch(() => {});
+  // Letusan terus setiap 2 detik
+setInterval(() => {
+  const x = Math.random() * window.innerWidth;
+  const y = Math.random() * window.innerHeight / 2;
+  createFirework(x, y);
+}, 2000);
+
 
   // Kembang api meletus di posisi mouse klik
   const x = e.clientX;
