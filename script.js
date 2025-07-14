@@ -32,3 +32,16 @@ setInterval(() => {
 }
 
 });
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  // Reset tampilan
+  document.getElementById('surprise').classList.add('hidden');
+
+  // Hentikan musik
+  const music = document.getElementById('bgMusic');
+  music.pause();
+  music.currentTime = 0;
+
+  // Scroll ke atas
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
