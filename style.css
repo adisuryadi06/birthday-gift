@@ -90,6 +90,30 @@ audio {
   z-index: 10;
 }
 
+.balloons {
+  position: fixed;
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  pointer-events: none;
+  animation: floatUp 8s linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    bottom: -150px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 110%;
+    opacity: 0;
+  }
+}
+
 /* Animasi */
 @keyframes fadeIn {
   from {opacity: 0;}
