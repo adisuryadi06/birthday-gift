@@ -1,11 +1,12 @@
-document.getElementById('giftBtn').addEventListener('click', () => {
+document.getElementById('giftBtn').addEventListener('click', (e) => {
   const surprise = document.getElementById('surprise');
   const music = document.getElementById('bgMusic');
 
   surprise.classList.remove('hidden');
+  music.play().catch(() => {});
 
-  // Mainkan musik (dari aksi pengguna, jadi diizinkan browser)
-  music.play().catch(e => {
-    console.log("Autoplay error: ", e);
-  });
+  // Kembang api meletus di posisi mouse klik
+  const x = e.clientX;
+  const y = e.clientY;
+  createFirework(x, y);
 });
