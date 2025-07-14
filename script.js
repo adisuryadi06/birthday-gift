@@ -36,12 +36,3 @@ document.getElementById('giftBtn').addEventListener('click', (e) => {
   // 💖 Panggil animasi love
   createHearts();
 });
-
-// Tombol ulang dari awal
-document.getElementById('resetBtn').addEventListener('click', () => {
-  document.getElementById('surprise').classList.add('hidden');
-  const music = document.getElementById('bgMusic');
-  music.pause();
-  music.currentTime = 0;
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
